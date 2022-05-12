@@ -1,2 +1,1 @@
 # fair-play
-testing
