@@ -1,1 +1,2 @@
 # fair-play
+THIS REPO IS USED FOR TEST ONLY.
