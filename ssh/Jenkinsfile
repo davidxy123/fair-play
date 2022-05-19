@@ -21,7 +21,7 @@ pipeline {
                    echo "check tags"
                    git tag -l
                    echo "find files"
-                   tree -alh
+                   ls -lrt
                    cd ./fair-play
                    ls
                    whoami
