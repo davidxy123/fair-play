@@ -20,7 +20,7 @@ pipeline {
         stage('List all files') {
             steps{
                 sh(script: """
-                   echo "hello"
+                   echo "list files with tree view"
                    tree -alh
                 """)
             }
