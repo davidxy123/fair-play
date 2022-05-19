@@ -9,6 +9,8 @@ pipeline {
                     pwd
                     rm -rf *
                     mvn --version
+                    echo "test ssh key"
+                    ssh -T git@github.com
                 """)
                 }
         }
