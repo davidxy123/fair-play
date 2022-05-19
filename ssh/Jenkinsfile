@@ -21,7 +21,7 @@ pipeline {
             steps{
                 sh(script: """
                    echo "list files with tree view"
-                   tree -alh
+                   tree -lh
                 """)
             }
         }
