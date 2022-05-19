@@ -12,11 +12,11 @@ pipeline {
                 }
         }
          stage('Checkout') {
-             steps(
+             steps{
                 echo "Checkout"
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'david-github-token', url: 'https://github.com/davidxy123/fair-play.git']]])
                 sh "ls -lrt"
-                  )
+                  }
          }
         stage('Check files with tree view') {
             steps{
