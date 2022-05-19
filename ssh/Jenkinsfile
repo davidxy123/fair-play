@@ -18,7 +18,7 @@ pipeline {
                    echo "check branch"
                    git branch
                    git branch -a
-                   get checkout main
+                   git checkout main
                    echo "check tags"
                    git tag -l
                    echo "find files"
