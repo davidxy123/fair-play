@@ -22,7 +22,7 @@ pipeline {
             steps{
                 sh(script: """
                    echo "tree view"
-                   sh "tree -lh"
+                   tree -lh
                 """)
             }
         }
