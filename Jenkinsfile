@@ -4,6 +4,7 @@ pipeline {
          stage('clean up') {
             steps{
                 sh(script: """
+                    ls
                     echo "clean up"
                     pwd
                     rm -rf *
