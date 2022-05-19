@@ -4,31 +4,24 @@ pipeline {
          stage('clean up') {
             steps{
                 sh(script: """
-                    ls
                     echo "clean up"
                     pwd
                     rm -rf *
-                    mvn --version
                 """)
                 }
         }
-        stage('test pipeline') {
+        stage('Checkout') {
+            steps {
+                echo 'Checkout'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'david-private-key-github', url: 'git@github.com:davidxy123/fair-play.git']]])
+                sh "ls -lrt"
+            }
+        }
+        stage('List all files') {
             steps{
                 sh(script: """
-                   echo "check branch"
-                   git branch
-                   git branch -a
-                   git fetch --all
-                   echo "check tags"
-                   git tag -l
-                   echo "find files"
-                   ls -lrt
-                   cd ./fair-play
-                   ls
-                   whoami
-                   id
-                   docker ps -a
-                   docker images -a
+                   echo "hello"
+                   tree -alh
                 """)
             }
         }
